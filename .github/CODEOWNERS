@@ -1,0 +1,27 @@
+# SuperQA Developer Hub Code Owners
+# These owners will be automatically requested for review when someone opens a pull request.
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+* @superqa/developer-hub-maintainers
+
+# Documentation
+/docs/ @superqa/docs-team
+
+# Release Notes
+/release-notes/ @superqa/product-team
+
+# Roadmap
+/roadmap/ @superqa/product-team
+
+# GitHub workflows and CI/CD
+/.github/ @superqa/devops-team
+
+# Configuration files
+/docusaurus.config.ts @superqa/developer-hub-maintainers
+/package.json @superqa/developer-hub-maintainers
+/tsconfig.json @superqa/developer-hub-maintainers
+
+# Integrations documentation
+/docs/integrations/ @superqa/integrations-team
+

@@ -25,7 +25,7 @@ Thanks for considering to contribute to the SuperQA Developer Hub! Contributions
 
 GitHub is the primary mechanism for changes. Pull requests are the mechanism to submit and approve changes. 
 
-Each pull request requires 1 approval per [CODEOWNER](/.github/CODEOWNERS) for EACH section that has changes. For example, if you've changed files in the CI and CD modules, you will require approvals from a CI codeowner AND a CD codeowner in order to merge your PR.
+Each pull request requires 1 approval per [CODEOWNER](/.github/CODEOWNERS) for the sections that have changes.
 
 ### Small changes
 
@@ -37,7 +37,7 @@ Small changes are items that do not require local testing and can be accomplishe
 
 Large changes are considered to be an entire document/tutorial or making UI/UX changes such as to the site structure, organization, or branding. These changes require a fork and local development/testing.
 
-Changes that touch multiple modules or sections of HDH tend to take longer to merge due to requiring approvals from many codeowners as well as taking longer to review. Try splitting apart larger PRs into smaller chunks and creating many smaller PRs. 
+Changes that touch multiple sections tend to take longer to merge due to requiring approvals from many codeowners as well as taking longer to review. Try splitting apart larger PRs into smaller chunks and creating many smaller PRs. 
 
 ### PR Merge Guidelines
 
@@ -55,7 +55,7 @@ PRs should follow these guidelines in order to be merged successfully:
 
 ## Style Guide
 
-If you are contributing to HDH, make sure you are compliant with our [Style Guide](./docs/hdh/style-guide).
+If you are contributing to SuperQA Developer Hub, make sure you follow best practices for technical documentation.
 
 ## Local development guide
 
@@ -131,7 +131,7 @@ repository](https://github.com/superqa-apps/developer-hub-apps). The sample appl
 
 ## Markdown Tutorial
 
-HDH is powered by [Markdown](https://daringfireball.net/projects/markdown/). Take a look at a [sample MD page](http://developer.superqa.io/docs/hdh/hdh-docusaurus-sandbox) showing off several MD features that are supported on HDH.
+SuperQA Developer Hub is powered by [Markdown](https://daringfireball.net/projects/markdown/). All documentation is written using standard Markdown with MDX support for React components.
 
 ## Additional metadata
 
@@ -188,7 +188,7 @@ Since the final document is in Markdown, feel free to author in a tool of your c
 Vale is an excellent tool for validating spelling and style in Markdown **locally**. You can run [Vale](https://vale.sh/) aganist a specific file or project structure prior to submitting if you would like, locally. This is not required.
 
 > :information_source:
-> Part of the PR checks, we are currently not using Vale. If you would like to check locally/programatically, Vale is a good tool.
+> Part of the PR checks, we are currently not using Vale. If you would like to check locally/programmatically, Vale is a good tool.
 
 ```
 #install
