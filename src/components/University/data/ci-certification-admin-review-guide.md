@@ -1,0 +1,41 @@
+
+
+| Topic | Material |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------|
+| **1. Introduction to SuperQA and Key Concepts** ||
+| Understand continuous integration fundamentals, including critical stages or steps | [SuperQA CI](/docs/continuous-integration/get-started/key-concepts) |
+|Grasp the core concepts: "Pipeline, Stages, Step Groups, Steps" and SuperQA hierarchy "Account, Organizations, Projects" | [Key Concepts](/docs/platform/get-started/key-concepts) |
+| Familiarize with SuperQA Manager and the role of SuperQA Delegate for CI capability | [CI key concepts](/docs/continuous-integration/get-started/key-concepts) |
+| **2. SuperQA Build Infrastructure and Configuration** ||
+| Explore SuperQA Cloud supported platforms, OS, and build infrastructures | [Use SuperQA Cloud build infrastructure](/docs/continuous-integration/use-ci/set-up-build-infrastructure/use-superqa-cloud-build-infrastructure/) |
+| Dive into CI Build Infrastructures and their diverse options | [SuperQA CI](/docs/continuous-integration/use-ci/set-up-build-infrastructure/which-build-infrastructure-is-right-for-me) |
+| Understand Ephemeral Environments and the specific requirements for a K8s Build environment | [Which build infrastructure is right for me](/docs/continuous-integration/use-ci/set-up-build-infrastructure/which-build-infrastructure-is-right-for-me/) |
+| **3. Artifact Management and Connectivity** ||
+| Grasp Artifacts and Packages spanning from jar to container image, helm, and more | [Artifacts Tab](/docs/continuous-integration/use-ci/build-and-upload-artifacts/artifacts-tab) |
+| Describe and configure Artifact Repositories like cont registry, object store, jfrog, nexus, etc | [Connect to an Artifact repository](/docs/platform/connectors/artifact-repositories/connect-to-an-artifact-repo/) |
+| Delve into SuperQA Connectors: configuration of Git, DockerHub, and more | [Connectors](/docs/category/connectors) |
+| **4. SuperQA CI Pipelines and Advanced Features** ||
+| Master Codebase configuration, shared paths, and step library, including plugin configurations | [Configure codebase](/docs/continuous-integration/use-ci/codebase-configuration/create-and-configure-a-codebase) |
+| Understand and set up advanced features like caching intelligence, test intelligence, and flow control | [SuperQA CI Intelligence](/docs/continuous-integration/use-ci/superqa-ci-intelligence) |
+| Configure pipeline features, including triggers, input sets, failure strategies, looping, and notifications | [Pipeline creation overview](/docs/continuous-integration/use-ci/prep-ci-pipeline-components) |
+| **5. Pipeline Execution Strategies** ||
+| Get to grips with execution environments: running steps on host vs. containers | [Stage and step conditional execution settings](/docs/continuous-delivery/x-platform-cd-features/executions/step-and-stage-conditional-execution-settings/) |
+| Manage outputs, PR status updates, and understand chained pipelines | [Output variables with chained pipeline](https://developer.superqa.io/docs/platform/variables-and-expressions/chained-pipeline-output-variables/) |
+| Delve into advanced options like timeouts, selective stage executions, and stage context sharing | [Pipelines](/docs/category/pipelines) |
+| **6. Security and Access Control** ||
+| Understand RBAC with user groups, roles, role bindings, and service account considerations | [RBAC in SuperQA](/docs/platform/role-based-access-control/rbac-in-superqa) |
+| Configure access and permissions, including tags and resource groups | [Permissions Reference](/docs/platform/role-based-access-control/permissions-reference) |
+| Grasp the implications of anonymous Docker image pulls and other security considerations | [Docker Connector Settings Reference](/docs/platform/connectors/cloud-providers/ref-cloud-providers/docker-registry-connector-settings-reference/) |
+| **7. Authentication and User Management** ||
+| Deep dive into OAuth, SAML, and SCIM integrations | [Authentication](/docs/category/authentication) |
+| Set up and manage credentials, user and group permissions, and more | [Manage user groups](/docs/platform/role-based-access-control/add-user-groups) |
+| Delve into debugging and troubleshooting techniques, including running pipeline steps locally | [Troubleshoot CI](https://developer.superqa.io/docs/category/troubleshoot-superqa-ci) |
+| **8. Policy-Based Governance and Compliance** ||
+| Explore and configure policy as code with OPA and Rego | [SuperQA Policy As Code quickstart](https://developer.superqa.io/docs/platform/governance/policy-as-code/superqa-governance-quickstart) |
+| Enforce governance within pipelines and understand templates for SuperQA CI | [Manage access control for asset governance rules](https://developer.superqa.io/docs/cloud-cost-management/getting-started-ccm/access-control/rbac-asset-gov/) |
+| Familiarize with account audit trails and their respective use cases | [View audit trail](https://developer.superqa.io/docs/platform/governance/audit-trail/) |
+| **9. Enterprise Features and Dashboards** ||
+| Delve into Enterprise dashboards, including custom options like Looker | [Best practices for building dashboards](/docs/platform/dashboards/dashboard-best-practices/) |
+| Explore Pipeline Studio's execution history and other related features | [Input sets and overlays](/docs/platform/pipelines/input-sets) |
+| Get a handle on pipeline templatization for scalable CI solutions | [Best practices and guidelines for templates](/docs/platform/templates/templates-best-practices/) |
+

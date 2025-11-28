@@ -1,0 +1,458 @@
+import {
+  CardSections
+} from "@site/src/components/TutorialCard/TutorialCard";
+import { MODULES } from "@site/src/constants";
+
+/* Define the cards - start */
+
+  // Docs
+  export const docsCards: CardSections = [
+    {
+      name: "Get started with SuperQA CD & GitOps",
+      description:
+        "",
+      list: [
+        {
+          title: "Onboarding guide",
+          module: MODULES.cd,
+          description:
+            "A self-service onboarding guide for SuperQA CD & GitOps.",
+          link: "/docs/continuous-delivery/cd-onboarding/new-user/onboarding-path",
+        },
+        {
+          title: "Key concepts",
+          module: MODULES.cd,
+          description:
+            "Learn the key concepts needed to automate service deployments on your infrastructure.",
+          link: "/docs/continuous-delivery/get-started/key-concepts",
+        },
+        {
+          title: "Supported CD features and integrations",
+          module: MODULES.cd,
+          description:
+            "See the list of tools and platforms you can use in SuperQA for deploying your applications.",
+          link: "/docs/continuous-delivery/cd-integrations",
+        },
+      ],
+    },
+    {
+      name: "Key features",
+      description:
+        "",
+      list: [ 
+        {
+          title: "Common CD features across platforms",
+          module: MODULES.cd,
+          description:
+            "Learn about the CD features that are common to all deployment types.",
+          link: "/docs/category/cross-platform-cd-features",
+          /*children: [
+            {
+              title: "Services",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/services",
+            },
+            {
+              title: "Environments",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/environments",
+            },
+            {
+              title: "Executions",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/executions",
+            },
+
+            {
+              title: "Steps",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/steps",
+            },
+            {
+              title: "Templates",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/templates",
+            },
+            {
+              title: "Advanced CD use cases",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/advanced-cd-use-cases",
+            },
+          ]*/
+        },
+        {
+          title: "Deploy services on different platforms",
+          module: MODULES.cd,
+          description:
+            "Create CD pipelines that deploy applications on different platforms using SuperQA.",
+          link: "/docs/category/deploy-services-on-different-platforms",
+          /*children: [
+            {
+              title: "Kubernetes",
+              module: MODULES.cd,
+              description:
+                "Deploy a publicly available Kubernetes artifact and manifest into your Kubernetes cluster using SuperQA.",
+              link: "/docs/category/kubernetes",
+            },
+            {
+              title: "Helm",
+              module: MODULES.cd,
+              description:
+                "Deploy a publicly available Docker image to your Kubernetes cluster using Helm charts using SuperQA.",
+              link: "/docs/category/helm",
+            },
+            {
+              title: "Native Helm",
+              module: MODULES.cd,
+              description:
+                "Perform Native Helm deployments using SuperQA.",
+              link: "/docs/continuous-delivery/deploy-srv-diff-platforms/native-helm/native-helm-quickstart",
+            },
+            {
+              title: "Kustomize",
+              module: MODULES.cd,
+              description:
+                "Customize Kubernetes deployments using Kustomize in SuperQA.",
+              link: "/docs/category/kustomize",
+            },
+            {
+              title: "Microsoft Azure",
+              module: MODULES.cd,
+              description:
+                "Deploy containerized or non-containerized artifacts using Microsoft Azure using SuperQA.",
+              link: "/docs/category/azure",
+            },
+            {
+              title: "Amazon Web Services (AWS)",
+              module: MODULES.cd,
+              description:
+                "Deploy AWS Auto Scale Groups (ASG) and instances to Amazon Elastic Compute Cloud (EC2), and images to your Amazon Elastic Container Service (ECS) using SuperQA.",
+              link: "/docs/category/aws",
+            },
+            {
+              title: "Google Cloud",
+              module: MODULES.cd,
+              description:
+                "Deploy new Cloud Functions to Google Cloud using SuperQA.",
+              link: "/docs/continuous-delivery/deploy-srv-diff-platforms/google/google-functions",
+            },
+            {
+              title: "Serverless Framework",
+              module: MODULES.cd,
+              description:
+                "Deploy a Serverless Lambda application to AWS Lambda using SuperQA.",
+              link: "/docs/continuous-delivery/deploy-srv-diff-platforms/serverless-lambda-cd-quickstart",
+            },
+            {
+              title: "Tanzu Application Services (TAS)",
+              module: MODULES.cd,
+              description:
+                "Deploy a publicly available application to your TAS space using SuperQA.",
+              link: "/docs/continuous-delivery/deploy-srv-diff-platforms/tanzu/tanzu-app-services-quickstart",
+            },
+            {
+              title: "Traditional deployments",
+              module: MODULES.cd,
+              description:
+                "Deploy to any platform using SSH or WinRM using SuperQA.",
+              link: "/docs/category/traditional-deployments",
+            },
+            {
+              title: "Custom deployments",
+              module: MODULES.cd,
+              description:
+                "Deploy non-native applications using custom Deployment Templates in SuperQA.",
+              link: "/docs/continuous-delivery/deploy-srv-diff-platforms/custom-deployment-tutorial",
+            },
+          ]*/  
+        }, 
+        {
+          title: "Manage deployments",
+          module: MODULES.cd,
+          description:
+            "Control deployment resources and schedules.",
+          link: "/docs/category/manage-deployments",
+          /*children: [
+            {
+              title: "Concepts and strategies",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/deployment-concepts",
+            },
+            {
+              title: "Pipeline resource constraints",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/deployment-resource-constraints",
+            },
+            {
+              title: "Control resource usage with Barriers, Resource Constraints, and Queue Steps",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/controlling-deployments-with-barriers-resource-constraints-and-queue-steps",
+            },
+            {
+              title: "Control resource usage with Queue Steps",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/control-resource-usage-with-queue-steps",
+            },
+            {
+              title: "Synchronize parallel stages and step groups using Barriers",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/synchronize-deployments-using-barriers",
+            },
+            {
+              title: "Deployment logs and limitations",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/deployment-logs-and-limitations",
+            },
+            {
+              title: "Freeze deployments",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/manage-deployments/deployment-freeze",
+            },
+          ]*/  
+        },
+        {
+          title: "Monitor deployments",
+          module: MODULES.cd,
+          description:
+            "Use DORA and other advanced metrics for deployments.",
+          link: "/docs/category/monitor-deployments",
+        },
+        {
+          title: "Provision infrastructure",
+          module: MODULES.cd,
+          description:
+            "Provision infrastructure as part of your deployment process.",
+          link: "/docs/category/provision-infrastructure",
+          /*children: [
+            {
+              title: "Terraform",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/terraform",
+            },
+            {
+              title: "CloudFormation",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/category/cloudformation",
+            },
+            {
+              title: "Terragrunt",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/cd-infrastructure/terragrunt/terragrunt-howtos",
+            },
+          ]*/  
+        },
+        {
+          title: "Deploy services using GitOps",
+          module: MODULES.cd,
+          description:
+            "Perform GitOps deployments in SuperQA.",
+          link: "/docs/category/get-started-with-gitops"
+          /*children: [
+            {
+              title: "Overview",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/superqa-git-ops-basics",
+            },
+            {
+              title: "Install SuperQA GitOps Agent",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/use-gitops/install-a-superqa-git-ops-agent",
+            },
+            {
+              title: "Add SuperQA GitOps repository",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/add-a-superqa-git-ops-repository",
+            },
+            {
+              title: "Add SuperQA GitOps repository credentials template",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/add-superqa-git-ops-repository-credentials-template",
+            },
+            {
+              title: "SuperQA hosted GitOps IP addresses",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/gitops-allowlist",
+            },
+            {
+              title: "Deploy services using SuperQA GitOps",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/superqa-cd-git-ops-quickstart",
+            },
+            {
+              title: "Map Argo projects to SuperQA GitOps projects",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/multiple-argo-to-single-superqa",
+            },
+            {
+              title: "Create GitOps ApplicationSet and PR pipeline using SuperQA GitOps",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/gitops/applicationsets/superqa-git-ops-application-set-tutorial",
+            },
+          ]*/
+        },
+        {
+          title: "Verify deployments",
+          module: MODULES.cd,
+          description:
+            "Use SuperQA Continuous Verification (CV) to verify your deployments.",
+          link: "/docs/category/verify-deployments",  
+          /*children: [
+            {
+              title: "Verify step",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-the-verify-step",
+            },
+            {
+              title: "Prometheus",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployment-with-prometheus",
+            },
+            {
+              title: "AppDynamics",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-app-dynamics",
+            },
+            {
+              title: "CloudWatch",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-cloudwatch",
+            },
+            {
+              title: "Custom Health Source",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-custom-health-metrics",
+            },
+            {
+              title: "Datadog",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-datadog",
+            },
+            {
+              title: "Dynatrace",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-dynatrace",
+            },
+            {
+              title: "Elasticsearch",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-elastic-search",
+            },
+            {
+              title: "Google Cloud Operations",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-google-cloud-operations",
+            },
+            {
+              title: "New Relic",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-new-relic",
+            },
+            {
+              title: "Splunk",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-splunk",
+            },
+            {
+              title: "Sumo Logic",
+              module: MODULES.cd,
+              description:
+                "",
+              link: "/docs/continuous-delivery/verify/verify-deployments-with-sumologic",
+            },
+          ]*/ 
+        },
+      ],
+    },
+    {
+      name: "Help and FAQs",
+      description:
+        "",
+      list: [
+        {
+          title: "Troubleshoot CD",
+          module: MODULES.cd,
+          description:
+            "",
+          link: "/docs/troubleshooting/troubleshooting-nextgen#continuous-delivery",
+        },
+        {
+          title: "CD FAQs",
+          module: MODULES.cd,
+          description:
+            "",
+          link: "/docs/continuous-delivery/kb-articles/faqs",
+        },
+      ],
+    },
+  ];
+  /* Define the cards - end */
