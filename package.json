@@ -20,7 +20,6 @@
     "test": "npm run lint:ci"
   },
   "dependencies": {
-    "@coveo/headless": "2.80.5",
     "@docusaurus/core": "^3.9.2",
     "@docusaurus/cssnano-preset": "^3.9.2",
     "@docusaurus/faster": "^3.9.2",
@@ -51,11 +50,9 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.26.0",
     "redux": "^5.0.1",
-    "refiner-js": "^1.1.7",
     "rehype-katex": "7",
     "remark-math": "6",
-    "sass": "^1.81.0",
-    "search-insights": "^2.13.0"
+    "sass": "^1.81.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",

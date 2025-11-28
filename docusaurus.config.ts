@@ -109,10 +109,6 @@ const config: Config = {
           position: 'right',
           href: '/release-notes',
         },
-        {
-          type: 'custom-coveo-search',
-          position: 'right',
-        },
 
         {
           position: 'right',
