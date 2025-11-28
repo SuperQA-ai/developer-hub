@@ -1263,7 +1263,7 @@ figure p {
   height: 24px;
   min-width: 24px;
   margin-right: 8px;
-  background-image: url('/img/logo.svg');
+  background-image: url('/img/superqa-logo-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1539,7 +1539,7 @@ figure p {
   height: 24px;
   min-width: 24px;
   margin-right: 8px;
-  background-image: url('/img/logo.svg');
+  background-image: url('/img/superqa-logo-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1551,7 +1551,7 @@ figure p {
   height: 24px;
   min-width: 24px;
   margin-right: 8px;
-  background-image: url('/img/icon_platform.svg');
+  background-image: url('/img/superqa-logo-icon.png');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -1677,12 +1677,12 @@ figure p {
 
 html[data-theme='light'] .sidebar-opensource>div>a::before,
 html[data-theme='light'] .sidebar-opensource>a::before {
-  background-image: url('/img/icon_platform.svg');
+  background-image: url('/img/superqa-logo-icon.png');
 }
 
 html[data-theme='dark'] .sidebar-opensource>div>a::before,
 html[data-theme='dark'] .sidebar-opensource>a::before {
-  background-image: url('/img/icon_platform.svg');
+  background-image: url('/img/superqa-logo-icon.png');
 }
 
 .sidebar-roadmap>div>a::before,
@@ -2022,7 +2022,7 @@ html[data-theme='dark'] .navbar .dropdown__menu .dropdown__section-header {
 /* === Navbar Documentation dropdown icons (initial set) === */
 /* Not categorized */
 .navbar .dropdown__link[href*="/docs/platform"] {
-  --nav-icon: url('/img/icon_platform.svg');
+  --nav-icon: url('/img/superqa-logo-icon.png');
 }
 
 .navbar .dropdown__link[href*="/docs/code-repository"] {
