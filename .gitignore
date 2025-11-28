@@ -22,8 +22,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-yarn.lock
-*-lock.json
 .env
 
 # VS Code
@@ -32,4 +30,3 @@ yarn.lock
 
 # Local Netlify folder
 .netlify
-yarn.lock
