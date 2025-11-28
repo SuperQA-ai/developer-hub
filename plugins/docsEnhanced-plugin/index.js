@@ -42,12 +42,6 @@ async function docsPluginEnhanced(context, options) {
 
       const outPutPath = path.join(outDir, destPath);
 
-      //Will need to change the filename variable when we change the file
-      const clientRedirectNetlifyPath = path.resolve(
-        __dirname,
-        '../../archive/redirects/client-redirect-netlify-format-aug-23-2023.txt'
-      );
-
       const exists = fs.existsSync(outPutPath);
       let strRedirects = '';
       docs.map((post) => {
@@ -55,12 +49,11 @@ async function docsPluginEnhanced(context, options) {
         const { title, redirect_from } = frontMatter;
 
         const htmlFilePath = path.join(outDir, permalink, 'index.html');
-      
+
         if (fs.existsSync(htmlFilePath)) {
           let htmlContent = fs.readFileSync(htmlFilePath, 'utf-8');
-          const canonicalTag = `<link rel="canonical" href="${
-            frontMatter.canonical_url || "https://developer.superqa.io"+permalink
-          }" />`;
+          const canonicalTag = `<link rel="canonical" href="${frontMatter.canonical_url || "https://developer.superqa.io" + permalink
+            }" />`;
           htmlContent = htmlContent.replace(
             /<\/head>/i,
             `  ${canonicalTag}\n</head>`
@@ -90,22 +83,6 @@ async function docsPluginEnhanced(context, options) {
         );
         fs.copySync(serverRedirectsPath, outPutPath);
         fs.appendFileSync(outPutPath, strRedirects);
-        // if we need to append on the first line
-        // fs.appendFileSync(
-        //   outPutPath,
-        //   "\r\n# client-redirect-netlify-format-aug-23-2023.txt appeneded from Archives \r\n\r\n"
-        // );
-        //Historic Client Re-riects
-        fs.readFile(clientRedirectNetlifyPath, function (err, data) {
-          if (err) throw err;
-          fs.appendFileSync(
-            outPutPath,
-            '\r\n# client-redirect-netlify-format-aug-23-2023.txt appeneded from Archives: \r\n\r\n'
-          );
-          fs.appendFileSync(outPutPath, data, function (err) {
-            if (err) throw err;
-          });
-        });
       } else {
         fs.appendFileSync(outPutPath, strRedirects);
       }
