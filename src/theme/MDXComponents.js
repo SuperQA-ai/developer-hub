@@ -26,7 +26,6 @@ export default {
   DocsTag: DocsTag,
   Telemetry: Telemetry,
   SuperQAApiData: SuperQAApiData,
-  HarnessApiData: SuperQAApiData, // Alias for backward compatibility
   Tooltip: Tooltip,
   DocTable: DocTable,
   UniversityAdmonition: UniversityAdmonition,
