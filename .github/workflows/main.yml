@@ -1,0 +1,232 @@
+name: SuperQA Developer Hub CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Job 1: Check for blocking labels
+  check-labels:
+    name: Check PR Labels
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for forbidden labels
+        run: |
+          FORBIDDEN_LABELS=("Do Not Merge" "Blocked / On hold" "Draft")
+          LABELS=$(jq -r '.pull_request.labels[].name' "$GITHUB_EVENT_PATH")
+          
+          echo "Labels on this PR:"
+          echo "$LABELS"
+          
+          for forbidden in "${FORBIDDEN_LABELS[@]}"; do
+            while IFS= read -r label; do
+              if [[ "$label" == "$forbidden" ]]; then
+                echo "::error::This PR has label '$forbidden'. Remove it before merging."
+                exit 1
+              fi
+            done <<< "$LABELS"
+          done
+          
+          echo "✅ No blocking labels found"
+
+  # Job 2: Validate file naming conventions
+  validate-files:
+    name: Validate File Names
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Validate markdown and image filenames
+        run: |
+          Red='\033[0;31m'
+          Green='\033[0;32m'
+          Yellow='\033[0;33m'
+          Blue='\033[0;34m'
+          Reset='\033[0m'
+
+          echo -e "${Blue}Checking changed Markdown and image files...${Reset}"
+          
+          failure_flag=0
+          
+          changed_files=$(git diff --name-only --diff-filter=d HEAD^1 HEAD | grep -E '\.(md|jpg|png|jpeg|svg)$' | grep -E '^(docs|kb|community|roadmap|static|university|release-notes)/' || true)
+          
+          if [ -z "$changed_files" ]; then
+            echo -e "${Green}No relevant files changed${Reset}"
+            exit 0
+          fi
+          
+          echo -e "${Blue}Changed files:${Reset}"
+          echo "$changed_files" | nl
+          
+          # Kebab-case check
+          invalid_kebab=$(echo "$changed_files" | grep -vE '^([a-z0-9]+(-[a-z0-9]+)*)(/([a-z0-9]+(-[a-z0-9]+)*))*\.(md|jpg|png|jpeg|svg)$' || true)
+          
+          if [ -n "$invalid_kebab" ]; then
+            echo -e "${Red}Not in kebab-case:${Reset}"
+            echo "$invalid_kebab" | nl
+            failure_flag=1
+          else
+            echo -e "${Green}✅ All files in kebab-case${Reset}"
+          fi
+          
+          # Length check
+          changed_basenames=$(echo "$changed_files" | xargs -n1 basename)
+          long_files=$(echo "$changed_basenames" | awk 'length($0) > 100')
+          
+          if [ -n "$long_files" ]; then
+            echo -e "${Red}Filenames exceed 100 chars:${Reset}"
+            echo "$long_files" | nl
+            failure_flag=1
+          else
+            echo -e "${Green}✅ All filenames valid length${Reset}"
+          fi
+          
+          if [ "$failure_flag" -eq 0 ]; then
+            echo -e "${Green}✅ All validations passed${Reset}"
+            exit 0
+          else
+            echo -e "${Red}❌ Validation failed${Reset}"
+            exit 1
+          fi
+
+  # Job 3: Lint, type check, and build
+  quality-checks:
+    name: Quality Checks
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [22.x]
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'yarn'
+      
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+      
+      - name: Run ESLint
+        run: yarn lint:eslint
+      
+      - name: Type check
+        run: yarn typecheck
+      
+      - name: Build site
+        run: yarn build
+        env:
+          NODE_ENV: production
+      
+      - name: Test site
+        run: |
+          yarn serve &
+          SERVER_PID=$!
+          sleep 5
+          curl -f http://localhost:3000/ || exit 1
+          kill $SERVER_PID
+      
+      # Upload build artifact for deployment job
+      - name: Upload build artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./build
+
+  # Job 4: PR Preview Comment
+  pr-preview:
+    name: PR Preview Comment
+    if: github.event_name == 'pull_request'
+    needs: [check-labels, validate-files, quality-checks]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prNumber = context.issue.number;
+            const body = `## ✅ Build Successful!
+            
+            All checks passed:
+            - ✅ No blocking labels
+            - ✅ File naming validated
+            - ✅ ESLint passed
+            - ✅ TypeScript checks passed
+            - ✅ Build completed
+            - ✅ Site tested
+            
+            Once merged, changes will be deployed automatically to production.
+            
+            📚 [View deployment guide](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/DEPLOYMENT.md)`;
+            
+            // Check if we already commented
+            const comments = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+            });
+            
+            const botComment = comments.data.find(comment => 
+              comment.user.type === 'Bot' && 
+              comment.body.includes('Build Successful')
+            );
+            
+            if (botComment) {
+              // Update existing comment
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: botComment.id,
+                body: body
+              });
+            } else {
+              // Create new comment
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prNumber,
+                body: body
+              });
+            }
+
+  # Job 5: Deploy to GitHub Pages (only on push to main)
+  deploy:
+    name: Deploy to GitHub Pages
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: quality-checks
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      - name: Deployment summary
+        run: |
+          echo "🚀 Deployed successfully!"
+          echo "📍 URL: ${{ steps.deployment.outputs.page_url }}"
+
