@@ -33,7 +33,6 @@
     "@docusaurus/theme-classic": "^3.9.2",
     "@docusaurus/theme-mermaid": "^3.9.2",
     "@mdx-js/react": "^3.0.0",
-    "@netlify/functions": "^2.7.0",
     "@segment/analytics-next": "^1.70.0",
     "@types/react": "^18.2.48",
     "clsx": "^2.0.0",

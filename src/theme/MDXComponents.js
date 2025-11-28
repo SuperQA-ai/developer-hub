@@ -8,7 +8,6 @@ import Accordion from "@site/src/components/ChaosEngineering/Accordion";
 import DocsButton from "../components/DocsButton";
 import DocsTag from "../components/DocsTag";
 import Telemetry from "../components/Telemetry";
-import SuperQAApiData from "../components/SuperQAApiData";
 import Tooltip from "../components/ToolTip/Tooltip";
 import DocTable from "../components/DocTable/DocTable";
 import UniversityAdmonition from "../components/Admonition/UniversityAdmonition";
@@ -25,7 +24,6 @@ export default {
   DocsButton: DocsButton,
   DocsTag: DocsTag,
   Telemetry: Telemetry,
-  SuperQAApiData: SuperQAApiData,
   Tooltip: Tooltip,
   DocTable: DocTable,
   UniversityAdmonition: UniversityAdmonition,
