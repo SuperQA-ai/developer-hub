@@ -220,7 +220,7 @@ const config: Config = {
             },
             {
               label: 'Do not sell or share my personal information',
-              to: 'https://harness-privacy.relyance.ai/',
+              to: 'https://superqa.ai/legal/privacy',
             },
           ],
         },
