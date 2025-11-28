@@ -20,7 +20,6 @@ const config: Config = {
   url: 'https://developer.superqa.ai',
   baseUrl: BASE_URL,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   onBrokenAnchors: 'ignore',
   favicon: 'img/favicon.ico',
   customFields: {
@@ -30,6 +29,9 @@ const config: Config = {
   //Mermaid Diagram Functionality
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
   themes: ['@docusaurus/theme-mermaid'],
 
