@@ -6,24 +6,6 @@ const docsPlugin = docsPluginExports.default;
 async function docsPluginEnhanced(context, options) {
   const docsPluginInstance = await docsPlugin(context, options);
 
-  const { siteConfig } = context;
-  const { themeConfig } = siteConfig; // , title, favicon, url: siteUrl, baseUrl
-  const { redirectExport } = themeConfig || {};
-
-  if (!redirectExport) {
-    throw new Error(
-      `You need to specify 'redirectExport' object in 'themeConfig' with 'destPath' field in it`
-    );
-  }
-
-  const { destPath } = redirectExport; // sourcePath,
-
-  if (!destPath) {
-    throw new Error(
-      'You specified the `redirectExport` object in `themeConfig` but the `destPath` field was missing.'
-    );
-  }
-
   return {
     ...docsPluginInstance,
     async postBuild(params) {
@@ -40,19 +22,15 @@ async function docsPluginEnhanced(context, options) {
 
       const docs = content.loadedVersions[0].docs;
 
-      const outPutPath = path.join(outDir, destPath);
-
-      const exists = fs.existsSync(outPutPath);
-      let strRedirects = '';
+      // Add canonical tags to HTML files
       docs.map((post) => {
-        const { permalink, frontMatter, source } = post;
-        const { title, redirect_from } = frontMatter;
+        const { permalink, frontMatter } = post;
 
         const htmlFilePath = path.join(outDir, permalink, 'index.html');
 
         if (fs.existsSync(htmlFilePath)) {
           let htmlContent = fs.readFileSync(htmlFilePath, 'utf-8');
-          const canonicalTag = `<link rel="canonical" href="${frontMatter.canonical_url || "https://developer.superqa.io" + permalink
+          const canonicalTag = `<link rel="canonical" href="${frontMatter.canonical_url || "https://developer.superqa.ai" + permalink
             }" />`;
           htmlContent = htmlContent.replace(
             /<\/head>/i,
@@ -62,30 +40,8 @@ async function docsPluginEnhanced(context, options) {
           fs.writeFileSync(htmlFilePath, htmlContent, 'utf-8');
         }
 
-        if (redirect_from) {
-          if (Array.isArray(redirect_from)) {
-            redirect_from.forEach((al) => {
-              strRedirects += `# MD Path : ${source} \r\n${al} ${permalink}\r\n\r\n`;
-            });
-          } else {
-            strRedirects += `# MD Path : ${source} \r\n${redirect_from} ${permalink}\r\n\r\n`;
-          }
-        }
-
-        return title;
+        return post.frontMatter.title;
       });
-
-      //Historic and User Generated Redirects, appeneding to _server-redirects
-      if (!exists) {
-        const serverRedirectsPath = path.resolve(
-          __dirname,
-          '../../_server-redirects'
-        );
-        fs.copySync(serverRedirectsPath, outPutPath);
-        fs.appendFileSync(outPutPath, strRedirects);
-      } else {
-        fs.appendFileSync(outPutPath, strRedirects);
-      }
     },
   };
 }

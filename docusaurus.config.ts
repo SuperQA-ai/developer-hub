@@ -252,9 +252,6 @@ const config: Config = {
       copyright: 'SuperQA Inc.',
       rssDescription: 'SuperQA Release Notes',
     },
-    redirectExport: {
-      destPath: '_redirects',
-    },
   } satisfies Preset.ThemeConfig,
   plugins: [
     'docusaurus-plugin-sass',
