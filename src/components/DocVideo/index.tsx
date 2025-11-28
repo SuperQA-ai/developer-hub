@@ -104,8 +104,6 @@ const DocVideo = ({
         height={height}
         referrerPolicy="strict-origin-when-cross-origin"
         frameBorder="0"
-        webkitallowfullscreen="true"
-        mozallowfullscreen="true"
         allowFullScreen={true}>
       </iframe>
     );

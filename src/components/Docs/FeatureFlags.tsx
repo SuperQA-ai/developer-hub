@@ -1,3 +1,4 @@
+import React from 'react';
 import { useColorMode } from '@docusaurus/theme-common';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.scss';
