@@ -16,24 +16,6 @@ export const platformData: Horizon = {
           "Ability to stream audit logs in New Line Delimited (NDJSON) format.",
         tag: [{ value: "Audit Trail" }],
       },
-      {
-        title: "Hashicorp Vault: JWT enhanced claims",
-        description:
-          "Allows users to include additional JWT claims (e.g., environment ID) for fine-grained access control and stricter secret isolation, improving security and compliance.",
-        tag: [{ value: "Connectors" }],
-      },
-      {
-        title: "Customize SuperQA UI",
-        description:
-          "Organisations can display their own logo, and favicon.",
-        tag: [{ value: "UI" }],
-      },
-      {
-        title: "Granular Permissions for Secrets",
-        description:
-          "Users will have separate Create and Edit permissions for secrets, instead of a single combined 'Create/Edit' permission, enabling more granular access control and improved security alignment.",
-        tag: [{ value: "Secrets" }, { value: "Access Control" }],
-      },
     ],
   },
   Next: {
@@ -51,27 +33,9 @@ export const platformData: Horizon = {
           "Allows users to move dashboards across organizations or accounts—whether within the same production cluster or across different ones—to support collaboration and reuse.",
         tag: [{ value: "Dashboard" }],
       },
-      {
-        title: "Alerting on platform limits",
-        description:
-          "Proactive notifications when approaching platform usage limits to prevent service disruptions and optimize resource planning.",
-        tag: [{ value: "Platform" }],
-      },
-      {
-        title: "Event Streaming",
-        description:
-          "Real-time streaming of data to external systems to support advanced monitoring and observability.",
-        tag: [{ value: "Insights" }],
-      },
-      {
-        title: "Delegate support in SuperQA MCP Server",
-        description:
-          "Delegate support in SuperQA MCP Server",
-        tag: [{ value: "Delegate" }],
-      },
     ],
   },
-  Later : {
+  Later: {
     description: "🔭 Q1 2026+, Feb 2026 & beyond",
     feature: [
       {
@@ -85,24 +49,6 @@ export const platformData: Horizon = {
         title: "DAG Support For Pipeline",
         description:
           "Enable complex flows such as parallel execution, stage grouping, etc.",
-      },
-      {
-        title: "Export audit trail as CSV",
-        description:
-          "Allows users to export the audit trail in CSV format for easier analysis, sharing, and record-keeping.",
-        tag: [{ value: "Audit Trail" }],
-      },
-      {
-        tag: [{ value: "Notify" }],
-        title: "Service account token expiration",
-        description:
-          "Configure service account token expiration notifications through the centralized notification system.",
-      },
-      {
-        title: "Move Project across Organizations",
-        description:
-          "Move a project from one organization to another to support scenarios like ownership change.",
-        tag: [{ value: "Platform" }],
       },
     ],
   },
@@ -119,12 +65,12 @@ export const platformData: Horizon = {
       {
         title: "Support Access control using tags for connectors",
         description:
-          "Add connectors as resources in a resource group “By Tag,” enabling dynamic inclusion or exclusion based on assigned tags." ,
+          "Add connectors as resources in a resource group “By Tag,” enabling dynamic inclusion or exclusion based on assigned tags.",
         tag: [{ value: "Access Control" }],
         link: "/docs/platform/connectors/manage-access-control-for-connectors/#configure-roles"
       },
       {
-        tag: [{ value: "Access Control" }, {value: "Pipeline"}],
+        tag: [{ value: "Access Control" }, { value: "Pipeline" }],
         title: "Pipeline Create/Edit permission split",
         description:
           "Split Pipeline 'Create/Edit' permission into 'Create' and 'Edit' permissions",
@@ -165,7 +111,7 @@ export const platformData: Horizon = {
           "Enables creation of custom dashboards using complete pipeline step execution data.",
       },
       {
-        tag: [{value: "Pipeline"}, { value: "Notify" }],
+        tag: [{ value: "Pipeline" }, { value: "Notify" }],
         title: "Support for all channels for Custom notifications",
         description:
           "Extends custom notifications to support all available channels, providing greater flexibility in how notifications are delivered.",
@@ -185,5 +131,5 @@ export const platformData: Horizon = {
         link: "/docs/self-managed-enterprise-edition/advanced-configurations/configure-custom-signin-message"
       },
     ],
-  }, 
+  },
 };

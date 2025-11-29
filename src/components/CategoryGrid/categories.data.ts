@@ -43,6 +43,7 @@ export const categories: Category[] = [
         name: "GitHub Action",
         href: "/docs/integrations/github-action",
         module: "github",
+        icon: "img/icon_code.svg",
         description: "Run SuperQA tests in GitHub Actions."
       },
     ],

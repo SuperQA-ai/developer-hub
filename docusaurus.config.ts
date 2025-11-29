@@ -280,7 +280,7 @@ const config: Config = {
         // include: ["tutorials/**/*.{md, mdx}", "docs/**/*.{md, mdx}"],
         exclude: ['**/shared/**', '**/static/**', '**/content/**'],
         routeBasePath: 'docs', //CHANGE HERE
-        showLastUpdateTime: true,
+        showLastUpdateTime: false,
         remarkPlugins: [
           [
             remarkMath,
