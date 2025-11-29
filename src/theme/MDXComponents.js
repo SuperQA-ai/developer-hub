@@ -4,7 +4,6 @@ import MDXComponents from "@theme-original/MDXComponents";
 import DocVideo from "@site/src/components/DocVideo";
 import CTABanner from "@site/src/components/CTABanner";
 import DocImage from "@site/src/components/DocImage";
-import Accordion from "@site/src/components/ChaosEngineering/Accordion";
 import DocsButton from "../components/DocsButton";
 import DocsTag from "../components/DocsTag";
 import Telemetry from "../components/Telemetry";
@@ -20,7 +19,6 @@ export default {
   DocVideo: DocVideo,
   CTABanner: CTABanner,
   DocImage: DocImage,
-  Accordion: Accordion,
   DocsButton: DocsButton,
   DocsTag: DocsTag,
   Telemetry: Telemetry,
