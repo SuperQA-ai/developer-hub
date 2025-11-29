@@ -68,9 +68,6 @@ const config: Config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'), // we could also use scss here
         },
-        googleTagManager: {
-          containerId: 'GTM-MJB7HPB',
-        },
       } satisfies Preset.Options,
     ],
   ],
