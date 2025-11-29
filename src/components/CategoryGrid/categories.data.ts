@@ -39,6 +39,12 @@ export const categories: Category[] = [
         module: "jenkins",
         description: "Integrate SuperQA with Jenkins pipelines."
       },
+      {
+        name: "GitHub Action",
+        href: "/docs/integrations/github-action",
+        module: "github",
+        description: "Run SuperQA tests in GitHub Actions."
+      },
     ],
   },
 ];

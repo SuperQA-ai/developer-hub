@@ -9,48 +9,9 @@ import Link from "@docusaurus/Link";
 const Roadmap = () => {
   const { siteConfig: { baseUrl = "/" } = {} } = useDocusaurusContext();
   const modules = [
-    { value: 'platform', name: 'Platform', icon: 'icon_platform.svg' },
-    { value: 'aida', name: 'SuperQA AI', icon: 'icon_aida.svg' },
-    {
-      value: 'ar',
-      name: 'Artifact Registry',
-      icon: 'icon_artifact_registry.svg',
-    },
-    { value: 'ata', name: 'AI Test Automation', icon: 'logo-ata.svg' },
-    { value: 'code', name: 'Code Repository', icon: 'icon_code.svg' },
-    { value: 'ci', name: 'Continuous Integration', icon: 'icon_ci.svg' },
-    { value: 'cd', name: 'Continuous Delivery & GitOps', icon: 'icon_cd.svg' },
-    { value: 'dbdevops', name: 'Database DevOps', icon: 'icon_dbdevops.svg' },
-    {
-      value: 'iacm',
-      name: 'Infrastructure as Code Management',
-      icon: 'icon_iacm.svg',
-    },
-    { value: 'ff', name: 'Feature Flags', icon: 'icon_ff.svg' },
-    {
-      value: 'fme',
-      name: 'Feature Management & Experimentation',
-      icon: 'icon_fme.svg',
-    },
-    { value: 'ccm', name: 'Cloud Cost Management', icon: 'icon_ccm.svg' },
-    {
-      value: 'sto',
-      name: 'Security Testing Orchestration',
-      icon: 'icon_sto.svg',
-    },
-    { value: 'ssca', name: 'Supply Chain Security', icon: 'icon_ssca.svg' },
-    { value: 'ce', name: 'Chaos Engineering', icon: 'icon_ce.svg' },
-    { value: 'idp', name: 'Internal Developer Portal', icon: 'icon_idp.svg' },
-    {
-      value: 'sei',
-      name: 'Software Engineering Insights',
-      icon: 'icon_sei.svg',
-    },
-    {
-      value: 'cde',
-      name: 'Cloud Development Environments',
-      icon: 'icon-cde.svg',
-    }
+    { value: 'platform', name: 'SuperQA App', icon: 'superqa-logo-icon.png' },
+    { value: 'jenkins', name: 'Jenkins Plugin', icon: 'icon-jenkins.svg' },
+    { value: 'github', name: 'GitHub Action', icon: 'icon_code.svg' },
   ];
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

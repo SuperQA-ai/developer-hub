@@ -98,7 +98,7 @@ const config: Config = {
           items: [
             // --- Core Documentation ---
             { to: '/docs/platform/overview', label: 'Platform Overview' },
-            { to: '/docs/integrations/jenkins', label: 'Integrations' },
+            { to: '/docs/integrations', label: 'Integrations' },
           ],
         },
         {
