@@ -88,24 +88,18 @@ const config: Config = {
       },
       items: [
         {
-          position: 'right',
-          type: 'dropdown',
-          label: 'Documentation',
-          to: 'docs',
-          items: [
-            // --- Core Documentation ---
-            { to: '/docs/platform/overview', label: 'Platform Overview' },
-            { to: '/docs/integrations', label: 'Integrations' },
-          ],
+          position: 'left',
+          label: 'Docs',
+          to: '/docs/introduction',
         },
         {
           label: 'Roadmap',
-          position: 'right',
+          position: 'left',
           href: '/roadmap',
         },
         {
           label: 'Release Notes',
-          position: 'right',
+          position: 'left',
           href: '/release-notes',
         },
 
@@ -277,6 +271,7 @@ const config: Config = {
         // include: ["tutorials/**/*.{md, mdx}", "docs/**/*.{md, mdx}"],
         exclude: ['**/shared/**', '**/static/**', '**/content/**'],
         routeBasePath: 'docs', //CHANGE HERE
+        sidebarCollapsible: true,
         showLastUpdateTime: false,
         remarkPlugins: [
           [

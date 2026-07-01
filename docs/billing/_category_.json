@@ -1,0 +1,6 @@
+{
+  "label": "BILLING",
+  "position": 9,
+  "collapsible": false,
+  "className": "menu__list-item--icon-billing"
+}

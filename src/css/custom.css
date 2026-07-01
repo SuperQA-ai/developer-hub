@@ -2213,3 +2213,410 @@ html[data-theme='dark'] .navbar .dropdown__menu .dropdown__section-header {
   background: linear-gradient(135deg, #c458ff, #ff66e8);
   box-shadow: 0 2px 6px rgba(255, 102, 232, 0.5);
 }
+
+/* Sidebar Icons */
+[class*="menu__list-item--icon-"]>a::before,
+[class*="menu__list-item--icon-"]>.menu__list-item-collapsible>a::before {
+  font-family: "Font Awesome 6 Free", "FontAwesome";
+  font-weight: 900;
+  margin-right: 10px;
+  width: 20px;
+  text-align: center;
+  display: inline-block;
+  color: var(--gray-600);
+}
+
+html[data-theme='dark'] [class*="menu__list-item--icon-"]>a::before,
+html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-collapsible>a::before {
+  color: var(--gray-200);
+}
+
+[class*="menu__list-item--icon-"]>a.menu__link--active::before,
+[class*="menu__list-item--icon-"]>.menu__list-item-collapsible>a.menu__link--active::before {
+  color: var(--ifm-color-primary);
+}
+
+.menu__list-item--icon-get-started>a::before,
+.menu__list-item--icon-get-started>.menu__list-item-collapsible>a::before {
+  content: "\f135";
+}
+
+/* fa-rocket */
+
+.menu__list-item--icon-dashboard>a::before,
+.menu__list-item--icon-dashboard>.menu__list-item-collapsible>a::before {
+  content: "\f0e4";
+}
+
+/* fa-tachometer */
+
+.menu__list-item--icon-test-case-gen>a::before,
+.menu__list-item--icon-test-case-gen>.menu__list-item-collapsible>a::before {
+  content: "\e2ca";
+}
+
+/* fa-wand-magic-sparkles */
+
+.menu__list-item--icon-build>a::before,
+.menu__list-item--icon-build>.menu__list-item-collapsible>a::before {
+  content: "\f5fd";
+}
+
+/* fa-layer-group */
+
+.menu__list-item--icon-run>a::before,
+.menu__list-item--icon-run>.menu__list-item-collapsible>a::before {
+  content: "\f04b";
+}
+
+/* fa-play */
+
+.menu__list-item--icon-reports>a::before,
+.menu__list-item--icon-reports>.menu__list-item-collapsible>a::before {
+  content: "\f201";
+}
+
+/* fa-chart-line */
+
+.menu__list-item--icon-configure>a::before,
+.menu__list-item--icon-configure>.menu__list-item-collapsible>a::before {
+  content: "\f1de";
+}
+
+/* fa-sliders-h */
+
+.menu__list-item--icon-account>a::before,
+.menu__list-item--icon-account>.menu__list-item-collapsible>a::before {
+  content: "\f007";
+}
+
+/* fa-user */
+
+.menu__list-item--icon-billing>a::before,
+.menu__list-item--icon-billing>.menu__list-item-collapsible>a::before {
+  content: "\f09d";
+}
+
+/* fa-credit-card */
+
+/* Ultra-compact Sidebar Spacing to match Tester Army */
+:root {
+  --ifm-menu-link-padding-vertical: 0.25rem !important;
+}
+
+[data-theme='dark'] {
+  --ifm-menu-link-padding-vertical: 0.25rem !important;
+}
+
+.theme-doc-sidebar-menu {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  gap: 0 !important;
+}
+
+.theme-doc-sidebar-menu ul.menu__list {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  gap: 0 !important;
+}
+
+/* Level 1 submenu list under categories (no left indentation, aligns with top-level) */
+.theme-doc-sidebar-menu>li>ul.menu__list {
+  padding-left: 0 !important;
+}
+
+/* Level 2 nested submenu list (under Integrations, needs more indentation to look nested) */
+.theme-doc-sidebar-menu>li>ul.menu__list>li>ul.menu__list {
+  padding-left: 1.5rem !important;
+}
+
+/* Level 3 and deeper nested submenus (under Jenkins/GitHub Action, standard indentation) */
+.theme-doc-sidebar-menu>li>ul.menu__list>li>ul.menu__list>li>ul.menu__list {
+  padding-left: 0.75rem !important;
+}
+
+.theme-doc-sidebar-menu li.theme-doc-sidebar-item-link,
+.theme-doc-sidebar-menu li.menu__list-item {
+  margin-top: 0.15rem !important;
+  margin-bottom: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-category {
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.theme-doc-sidebar-menu>li:first-child {
+  margin-top: 1.25rem !important;
+}
+
+.theme-doc-sidebar-menu .menu__link,
+.theme-doc-sidebar-menu .menu__list-item-collapsible>a {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+  padding-right: 2rem !important;
+  /* Keep text away from the absolute caret */
+  line-height: 1.25 !important;
+  font-size: 0.95rem;
+  min-height: auto !important;
+  height: auto !important;
+}
+
+.theme-doc-sidebar-menu .menu__list-item-collapsible {
+  height: auto !important;
+  position: relative !important;
+  /* Enable absolute positioning for carets */
+}
+
+.theme-doc-sidebar-menu .menu__caret {
+  position: absolute !important;
+  right: 0.5rem !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+}
+
+/* Category header styling (BUILD, RUN, etc.) */
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-category>.menu__list-item-collapsible>.menu__link {
+  text-transform: uppercase;
+  font-size: 0.8rem !important;
+  font-weight: 700;
+  color: var(--gray-500) !important;
+  letter-spacing: 0.05em;
+  padding-left: 0.5rem !important;
+}
+
+/* Hide icons for category headers (BUILD, RUN, etc.) */
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-category>.menu__link::before,
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-category>.menu__list-item-collapsible>.menu__link::before {
+  display: none !important;
+}
+
+/* Sub-item specific styling */
+.theme-doc-sidebar-menu ul.menu__list .menu__link,
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-link>.menu__link {
+  font-size: 0.9rem !important;
+  color: var(--gray-600) !important;
+  font-weight: 500;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+  margin: 0 0.5rem !important;
+  /* Add small horizontal margin so the background pill doesn't touch the edges */
+  padding-left: 0.5rem !important;
+}
+
+/* Hover state for links */
+.theme-doc-sidebar-menu ul.menu__list .menu__link:not(.menu__link--active):hover,
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-link>.menu__link:not(.menu__link--active):hover {
+  background-color: var(--gray-100) !important;
+  color: var(--gray-900) !important;
+}
+
+/* Active state for links */
+.theme-doc-sidebar-menu ul.menu__list .menu__link--active,
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-link>.menu__link--active {
+  background-color: #fff0f5 !important;
+  /* Extremely light red rose background */
+  color: var(--primary-5) !important;
+}
+
+/* Ensure category headers (like BUILD) NEVER get a hover background */
+.theme-doc-sidebar-menu>li.theme-doc-sidebar-item-category>.menu__list-item-collapsible:hover {
+  background-color: transparent !important;
+}
+
+/* Root icons */
+.menu__list-item--icon-welcome>a::before {
+  content: "\f015";
+}
+
+/* fa-home */
+.menu__list-item--icon-introduction>a::before {
+  content: "\f518";
+}
+
+/* fa-book-open */
+.menu__list-item--icon-quick-start>a::before {
+  content: "\f135";
+}
+
+/* fa-rocket */
+.menu__list-item--icon-dashboard>a::before {
+  content: "\f84c";
+}
+
+/* fa-border-all (grid) */
+.menu__list-item--icon-test-case-gen>a::before {
+  content: "\f0d0";
+}
+
+/* fa-magic (sparkle) */
+
+/* BUILD icons */
+.menu__list-item--icon-test-suites>a::before {
+  content: "\f5fd";
+}
+
+/* fa-layer-group */
+.menu__list-item--icon-test-plans>a::before {
+  content: "\f14a";
+  font-weight: 400;
+}
+
+/* fa-check-square */
+.menu__list-item--icon-release-plans>a::before {
+  content: "\f02b";
+}
+
+/* fa-tag */
+.menu__list-item--icon-test-data>a::before {
+  content: "\f1c0";
+}
+
+/* fa-database */
+
+/* RUN icons */
+.menu__list-item--icon-schedules>a::before {
+  content: "\f017";
+  font-weight: 400;
+}
+
+/* fa-clock */
+.menu__list-item--icon-test-runs>a::before {
+  content: "\f144";
+  font-weight: 400;
+}
+
+/* fa-play-circle */
+.menu__list-item--icon-release-runs>a::before {
+  content: "\f093";
+}
+
+/* fa-upload */
+
+/* CONFIGURE icons */
+.menu__list-item--icon-registry-fields>a::before {
+  content: "\f0ca";
+}
+
+/* fa-list-ul */
+.menu__list-item--icon-severity-weights>a::before {
+  content: "\f5e1";
+}
+
+/* fa-balance-scale-right */
+.menu__list-item--icon-configure-reports>a::before {
+  content: "\f201";
+}
+
+/* fa-chart-line */
+.menu__list-item--icon-team>a::before {
+  content: "\f0c0";
+}
+
+/* fa-users */
+.menu__list-item--icon-environment>a::before {
+  content: "\f0ac";
+}
+
+/* fa-globe */
+.menu__list-item--icon-integrations>a::before,
+.menu__list-item--icon-integrations>.menu__list-item-collapsible>a::before {
+  content: "\f1e6";
+}
+
+/* fa-plug */
+
+/* ACCOUNT icons */
+.menu__list-item--icon-personal-info>a::before {
+  content: "\f007";
+  font-weight: 400;
+}
+
+/* fa-user */
+.menu__list-item--icon-organization>a::before {
+  content: "\f1ad";
+}
+
+/* fa-building */
+.menu__list-item--icon-security>a::before {
+  content: "\f023";
+}
+
+/* fa-lock */
+.menu__list-item--icon-api-keys>a::before {
+  content: "\f084";
+}
+
+/* fa-key */
+
+/* BILLING icons */
+.menu__list-item--icon-plan-usage>a::before {
+  content: "\f09d";
+  font-weight: 400;
+}
+
+/* fa-credit-card */
+.menu__list-item--icon-usage-history>a::before {
+  content: "\f1da";
+}
+
+/* fa-history */
+
+/* Add book icon to the Docs navbar link */
+.navbar__item[href*="/docs/"]::before {
+  content: "\f02d";
+  /* fa-book */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 0.35rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* Add map icon to the Roadmap navbar link */
+.navbar__item[href*="/roadmap"]::before {
+  content: "\f279";
+  /* fa-map */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 0.35rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+/* Add newspaper icon to the Release Notes navbar link */
+.navbar__item[href*="/release-notes"]::before {
+  content: "\f1ea";
+  /* fa-newspaper */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  margin-right: 0.35rem;
+  font-size: 0.95rem;
+  vertical-align: middle;
+}
+
+.navbar__link {
+  font-weight: 500 !important;
+  color: var(--gray-600) !important;
+  /* Soft gray for inactive items */
+}
+
+.navbar__link--active,
+.navbar__link.navbar__link--active {
+  color: var(--ifm-color-primary) !important;
+  /* Keep primary color for active item */
+}
+
+.navbar__link:hover {
+  color: var(--ifm-color-primary-light) !important;
+}
