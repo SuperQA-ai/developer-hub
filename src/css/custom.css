@@ -345,6 +345,7 @@
   --ifm-heading-font-weight: 600;
   --ifm-heading-line-height: 120%;
   --ifm-heading-color: var(--gray-800);
+  --ifm-h1-font-size: 28px;
 
   /* here */
   --ifm-color-content-light: var(--gray-800);
