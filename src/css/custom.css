@@ -336,7 +336,7 @@
 
   /* Sidebar Menu Hover & Active States */
   --ifm-menu-color-hover: var(--primary-5);
-  --ifm-menu-color-background-hover: #fff1f7;
+  --ifm-menu-color-background-hover: transparent;
   --ifm-menu-color-active: var(--primary-5);
   --ifm-menu-color-background-active: #fff1f7;
 
