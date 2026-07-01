@@ -4,20 +4,25 @@ title: Overview
 sidebar_position: 1
 ---
 
-# Mail Integration Overview
+# Email Integration
 
-Set up email notifications to receive alerts and summaries of test runs directly in your inbox.
+The Email integration lets SuperQA send test reports and notifications directly to your team's inboxes. When a test run completes — or a critical test fails — the right people get notified automatically, without having to log into the dashboard.
 
-## Features
+Navigate to **Configure > Integrations**, find the **Email** card, and click **+ Set Up Email** to get started.
 
-- **Test Run Summaries**: Receive detailed reports of test suite outcomes, including pass rates and fail durations.
-- **Failed Test Alerts**: Get immediate email notifications when critical tests fail.
-- **Daily digests**: Configure daily summary emails for your project dashboard metrics.
+---
 
-## Setup Instructions
+## Setting Up Email Recipients
 
-1. Navigate to **Configure > Integrations** in the SuperQA dashboard.
-2. Select **Mail Integration**.
-3. Enter the target email addresses of your team members.
-4. Select the notification triggers (e.g., on failure, on test run complete).
-5. Click **Save**.
+Email is configured through a simple recipient list — no SMTP credentials or API keys required.
+
+1. Click **+ Set Up Email** (or **Manage Email** if already configured).
+2. In the **Email Configuration** dialog, enter an email address in the **Email Recipients** field.
+3. Click **+ Add** to add it to the recipient list.
+4. Repeat for any additional recipients.
+5. To remove a recipient, click the **✕** next to their address.
+6. Click **Save**.
+
+Once saved, the Email card on the Integrations page will show a **● Configured** status and the button will change to **Manage Email**.
+
+> **Who receives what?** All addresses in the recipient list will receive test run reports and notifications whenever a scheduled or manual test run completes.
