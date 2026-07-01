@@ -2250,6 +2250,13 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 
 /* fa-tachometer */
 
+.menu__list-item--icon-projects>a::before,
+.menu__list-item--icon-projects>.menu__list-item-collapsible>a::before {
+  content: "\f07b";
+}
+
+/* fa-folder */
+
 .menu__list-item--icon-test-case-gen>a::before,
 .menu__list-item--icon-test-case-gen>.menu__list-item-collapsible>a::before {
   content: "\e2ca";
