@@ -2638,10 +2638,10 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
   color: var(--ifm-color-primary-light) !important;
 }
 
-/* Custom Scrollbar - Only visible on hover/interaction */
+/* Custom Minimal Scrollbar - Darkens on interaction */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -2649,23 +2649,27 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 }
 
 ::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15); /* Very faint by default */
+  border-radius: 10px;
 }
 
-/* Show scrollbar thumb when hovering the scrollable container */
-:hover::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.3);
-}
-
+/* Only get darker when the user actually hovers over the scrollbar thumb itself */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 100, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-[data-theme='dark'] :hover::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+::-webkit-scrollbar-thumb:active {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 [data-theme='dark'] ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme='dark'] ::-webkit-scrollbar-thumb:active {
+  background-color: rgba(255, 255, 255, 0.5);
 }
