@@ -19,7 +19,7 @@ To start generating tests, navigate to **BUILD > Test Case Gen**. The main inter
 
 * **Description Prompt:** In the central text area, describe the UI flow, feature, or page you want to test (e.g., *Verify user login with valid credentials on https://example.com*).
 * **Upload Docs:** If you have PRDs or technical specifications, click the **Upload Docs** button to guide the AI.
-* **Connect Repo:** Click the **Connect Repo** button to pull context directly from your connected GitHub repository. SuperQA will read your source code so the AI can generate tests that reflect your actual implementation. To use this feature, first connect your GitHub account under [Configure > Integrations > GitHub Repository Access](../configure/integrations/github-action/overview.md).
+* **Connect Repo:** Click the **Connect Repo** button to pull context directly from your connected GitHub repository. SuperQA will read your source code so the AI can generate tests that reflect your actual implementation. To use this feature, first connect your GitHub account under [Configure > Integrations > GitHub Repository Access](../configure/integrations/github-repo.md).
 
 * **Example Prompts:** If you aren't sure where to start, click one of the quick-start chips (like *Shopify Checkout*) to auto-fill the prompt.
 

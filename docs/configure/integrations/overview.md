@@ -65,7 +65,7 @@ Each integration card shows its current status:
 ## Individual Integration Guides
 
 - [Email](./mail.md) — Set up email recipients for test notifications.
-- [GitHub Repository Access](./github-action/overview.md) — Connect GitHub for AI-powered test generation from code.
+- [GitHub Repository Access](./github-repo.md) — Connect GitHub for AI-powered test generation from code.
 - [GitHub Actions CI/CD](./github-action/overview.md) — Automate test runs in your CI pipeline.
 - [Jira](./jira.md) — Link test failures to Jira issues automatically.
 - [Microsoft Teams](./microsoft-teams.md) — Send notifications to Teams channels.
