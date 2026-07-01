@@ -9,7 +9,21 @@ sidebar_class_name: menu__list-item--icon-environment
 
 **Environments** let you run the same test suite against different deployment targets — for example, verifying a feature on **Staging** before promoting it to **Production**. Each environment holds its own set of configuration variables (like base URLs, API keys, or company IDs) that are automatically injected into test runs when that environment is selected.
 
-This means you write your tests once and run them anywhere, simply by switching the environment.
+## Why Environments Matter
+
+The real power of environments is how they connect to your **test steps**. Instead of hardcoding values directly into a test step (e.g., typing `https://app.production.com` as a URL), you reference the environment variable instead (e.g., `{{APP_URL}}`).
+
+When a test run is triggered:
+- SuperQA looks at the **selected environment**
+- Finds the value for `APP_URL` in that environment
+- Injects it into every step that references it — automatically
+
+This means:
+- ✅ **No test case edits needed** when moving from Staging to Production
+- ✅ **No risk** of accidentally leaving a hardcoded staging URL in a production run
+- ✅ **One test, multiple environments** — write once, run anywhere
+
+Just select the target environment when scheduling or running a test plan, and all the variable values are swapped in for you.
 
 Navigate to **Configure > Environment** to manage your environments.
 
@@ -69,4 +83,5 @@ Click **+ Add Variable** and fill in the form:
 
 Click **+ Add Variable** to save.
 
-> **Tip:** Use environment variables in your test steps instead of hardcoding URLs or credentials. This way, switching from Staging to Production is as simple as selecting a different environment — no test edits required.
+> **How to use variables in test steps:** Reference any environment variable in a step using double curly braces — `{{VARIABLE_NAME}}`. For example, use `{{APP_URL}}` as the navigation target in a step instead of typing the URL directly. When the test runs, SuperQA replaces `{{APP_URL}}` with the actual value from the selected environment. Switching from Staging to Production is then as simple as selecting a different environment at run time — no test case changes required.
+
