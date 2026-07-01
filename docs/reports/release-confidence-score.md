@@ -2,6 +2,7 @@
 id: release-confidence-score
 title: Release Confidence Score
 sidebar_position: 2
+sidebar_class_name: menu__list-item--icon-release-confidence
 ---
 
 # Release Confidence Score

@@ -1,5 +1,6 @@
 {
-  "label": "Reports & Analytics",
+  "label": "REPORTS & ANALYTICS",
   "position": 6,
+  "collapsible": false,
   "className": "menu__list-item--icon-reports"
 }

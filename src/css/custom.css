@@ -2511,6 +2511,15 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 
 /* fa-upload */
 
+/* REPORTS icons */
+.menu__list-item--icon-release-confidence>a::before {
+  content: "\f200";
+}
+
+.menu__list-item--icon-continuous-quality>a::before {
+  content: "\f201";
+}
+
 /* CONFIGURE icons */
 .menu__list-item--icon-registry-fields>a::before {
   content: "\f0ca";

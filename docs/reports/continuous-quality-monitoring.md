@@ -2,6 +2,7 @@
 id: continuous-quality-monitoring
 title: Continuous Quality Monitoring
 sidebar_position: 3
+sidebar_class_name: menu__list-item--icon-continuous-quality
 ---
 
 # Continuous Quality Monitoring
