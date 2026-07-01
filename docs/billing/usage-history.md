@@ -36,14 +36,34 @@ Use the controls at the top of the table to narrow down results:
 
 ---
 
-## Understanding credit amounts
+## Understanding Credit Types
 
-Each row represents a single billable event. The **Amount** column shows the exact credits deducted. Credit costs vary depending on the type of activity:
+Each credit deduction is categorized by type so you know exactly what consumed credits and why. The **Type** filter (and the **Type** column in the table) uses these categories:
 
-| Activity type | Description |
+| Credit Type | What triggered it |
 |---|---|
-| **Scheduled Run** | A test run triggered by a schedule. Typically consumes a small amount of credits per execution. |
-| **Test Execution** | A manually triggered or CI-triggered test execution. Cost depends on test complexity and duration. |
+| **Test Execution** | A single test case was manually triggered or run via CI/CD. |
+| **Step Execution** | An individual test step was executed (e.g., during step-level debugging or verification in the editor). |
+| **Batch Execution** | A group of test cases was executed together as a batch run. |
+| **Scheduled Run** | A test run was automatically triggered by a configured Schedule (e.g., a nightly run). |
+| **Credit Recharge** | Credits were added to your account (a top-up or plan renewal). This row shows a positive credit addition, not a deduction. |
+| **Generate Test Steps** | Credits were consumed when the AI generated test steps for a test case using the AI Browser Understanding feature. |
+
+---
+
+## Searching and Filtering
+
+Use the **Filters** panel (click the Filters button at the top of the table) to narrow down your usage history:
+
+| Filter | Description |
+|---|---|
+| **Type** | Filter by credit type — Test Execution, Step Execution, Batch Execution, Scheduled Run, Credit Recharge, or Generate Test Steps. |
+| **Project** | Show only transactions for a specific project. |
+| **Suite** | Further narrow results to a specific Test Suite within the selected project. |
+| **Scenario** | Filter down to a specific Scenario within the selected Suite. |
+| **Date Range** | Filter by a custom date range using the date picker. |
+
+Once you've set your filters, click **Apply Filters**. To clear all filters and return to the full history, click **Reset**.
 
 ---
 
@@ -59,10 +79,11 @@ The **Source** column indicates where the credits were drawn from:
 ## Frequently asked questions
 
 **Why do some runs cost different amounts?**
-Credit cost depends on the type and complexity of the run. Simple scheduled runs typically cost less than full test executions that involve more steps and browser resources.
+Credit cost depends on the type and complexity of the run. A Scheduled Run of a full test suite costs more credits than a single Step Execution. AI features like Generate Test Steps also consume credits.
 
 **How far back does the history go?**
-Usage history is retained for the duration of your subscription. You can filter by date range to review past activity.
+Usage history is retained for the duration of your subscription. Use the Date Range filter to review past activity.
 
-**Can I export my usage history?**
-You can use the search and filter controls to isolate specific entries for review.
+**What is a Credit Recharge entry?**
+When your plan renews or you purchase extra credits, a Credit Recharge entry appears in your history showing the number of credits added to your balance.
+
