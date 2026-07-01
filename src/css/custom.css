@@ -334,6 +334,12 @@
 
   --ifm-link-color: var(--ifm-color-primary);
 
+  /* Sidebar Menu Hover & Active States */
+  --ifm-menu-color-hover: var(--primary-5);
+  --ifm-menu-color-background-hover: #fff1f7;
+  --ifm-menu-color-active: var(--primary-5);
+  --ifm-menu-color-background-active: #fff1f7;
+
   --ifm-navbar-padding-vertical: calc(var(--ifm-spacing-vertical) * 0.75);
   --ifm-navbar-height: 4.25rem;
 
