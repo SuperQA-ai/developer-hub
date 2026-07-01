@@ -151,6 +151,7 @@ const config: Config = {
         language: ['en'],
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
+        docsPluginIdForPreferredVersion: 'docs1',
       },
     ],
     'docusaurus-plugin-sass',
