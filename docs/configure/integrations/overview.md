@@ -44,9 +44,6 @@ These integrations are available and ready to use:
 |---|---|---|
 | **Microsoft Teams** | Notifications | Send test run results, failures, and release updates to Microsoft Teams channels. |
 
-### 🔜 Coming Soon
-
-Additional integrations are under development and will be available in future releases.
 
 ---
 
