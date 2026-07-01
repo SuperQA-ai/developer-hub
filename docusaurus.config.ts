@@ -119,43 +119,6 @@ const config: Config = {
       // style: "dark",
       links: [
         {
-          title: 'SuperQA Platform',
-          items: [
-            {
-              label: 'Overview',
-              to: 'https://superqa.ai',
-            },
-            {
-              label: 'Test Automation',
-              to: 'https://superqa.ai/test-automation',
-            },
-            {
-              label: 'AI-Powered Testing',
-              to: 'https://superqa.ai/ai-testing',
-            },
-            {
-              label: 'Browser Automation',
-              to: 'https://superqa.ai/browser-automation',
-            },
-            {
-              label: 'CI/CD Integration',
-              to: 'https://superqa.ai/integrations',
-            },
-            {
-              label: 'Jenkins Plugin',
-              to: 'https://superqa.ai/jenkins-plugin',
-            },
-            {
-              label: 'API Testing',
-              to: 'https://superqa.ai/api-testing',
-            },
-            {
-              label: 'Reporting & Analytics',
-              to: 'https://superqa.ai/reporting',
-            },
-          ],
-        },
-        {
           title: 'Resources',
           items: [
             {
