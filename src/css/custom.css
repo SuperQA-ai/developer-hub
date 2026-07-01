@@ -2513,7 +2513,7 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 
 /* REPORTS icons */
 .menu__list-item--icon-release-confidence>a::before {
-  content: "\f200";
+  content: "\f3ed";
 }
 
 .menu__list-item--icon-continuous-quality>a::before {

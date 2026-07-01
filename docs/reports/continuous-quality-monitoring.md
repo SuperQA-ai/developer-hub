@@ -7,17 +7,14 @@ sidebar_class_name: menu__list-item--icon-continuous-quality
 
 # Continuous Quality Monitoring
 
-**Continuous Quality Monitoring (CQM)** provides a long-term, high-level view of your application's health over time. Unlike the Release Confidence Score (which evaluates a single, point-in-time build), CQM analyzes trends across multiple continuous test executions.
+Runs automatically on a schedule — tracks quality over time and tells you if your product is **drifting** before it becomes a real problem. Spot regression patterns and stability changes across every test plan.
 
-## How it Works
+## Core Features
 
-CQM is driven by scheduled **Test Runs**. As your automated suites execute on a recurring basis (e.g., nightly, hourly, or on every commit to a specific branch), SuperQA aggregates the results to form a continuous quality baseline.
-
-### Key Metrics Tracked
-
-- **Pass Rate Trends:** Visualizes how your overall pass rate is shifting over time. A downward trend indicates degrading code quality or stale tests.
-- **Flakiness Over Time:** Identifies tests that flip between passing and failing across multiple automated runs, allowing you to quarantine and fix unstable tests.
-- **Execution Duration:** Tracks the time it takes your suites to run, helping you identify performance regressions or bloated test suites.
+- **Stability trend**: Visualizes how your overall pass rate is shifting over time. A downward trend indicates degrading code quality or stale tests.
+- **Drift detection**: Tells you if your product is drifting before it becomes a real problem.
+- **AI evaluation**: Uses AI to automatically evaluate patterns across runs.
+- **Flakiness trends**: Identifies tests that flip between passing and failing across multiple automated runs, allowing you to quarantine and fix unstable tests.
 
 ## Using the Dashboard
 
