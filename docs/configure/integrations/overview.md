@@ -1,6 +1,6 @@
 ---
 id: integrations-overview
-title: Integrations
+title: Overview
 sidebar_position: 1
 ---
 
@@ -64,7 +64,8 @@ Each integration card shows its current status:
 
 ## Individual Integration Guides
 
-- [Email](./mail/overview.md) — Set up email recipients for test notifications.
+- [Email](./mail.md) — Set up email recipients for test notifications.
 - [GitHub Repository Access](./github-action/overview.md) — Connect GitHub for AI-powered test generation from code.
 - [GitHub Actions CI/CD](./github-action/overview.md) — Automate test runs in your CI pipeline.
-- [Jira](./jira/overview.md) — Link test failures to Jira issues automatically.
+- [Jira](./jira.md) — Link test failures to Jira issues automatically.
+- [Microsoft Teams](./microsoft-teams.md) — Send notifications to Teams channels.
