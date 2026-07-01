@@ -82,5 +82,5 @@ Connect with the developer tools you use daily:
 
 Ready to get started? Explore the following guides:
 *   [Dashboard Overview](./dashboard.md) — Learn how to navigate your SuperQA control panel.
-*   [Creating Your First Test Case](./test-case-gen.md) — Write your first scriptless, plain-English test case.
+*   [Test Case Gen](./build/test-case-gen.md) — Write your first scriptless, plain-English test case.
 *   [Setting Up Integrations](./configure/integrations/jenkins/overview) — Link Jenkins, GitHub, Jira, and Slack to your workflow.

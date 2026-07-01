@@ -75,6 +75,6 @@ Click the **⋮** menu on any project card to access options like editing projec
 
 Once your project is set up, you're ready to:
 
-- **[Generate test cases](./test-case-gen)** — let SuperQA's AI analyze your Application URL and automatically create test cases based on discovered user flows.
+- **[Generate test cases](./build/test-case-gen.md)** — let SuperQA's AI analyze your Application URL and automatically create test cases based on discovered user flows.
 - **[Build test suites](./build/test-suites)** — group test cases into suites for organized execution and reporting.
 - **[Run tests](./run/test-runs)** — execute your tests on SuperQA's cloud-simulated environments and review video playback of every step.
