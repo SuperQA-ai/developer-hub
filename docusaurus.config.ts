@@ -90,6 +90,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
+          docsPluginId: 'docs1',
           position: 'left',
           label: 'Docs',
         },
