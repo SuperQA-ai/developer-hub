@@ -85,3 +85,28 @@ Click **+ Add Variable** to save.
 
 > **How to use variables in test steps:** Reference any environment variable in a step using double curly braces — `{{VARIABLE_NAME}}`. For example, use `{{APP_URL}}` as the navigation target in a step instead of typing the URL directly. When the test runs, SuperQA replaces `{{APP_URL}}` with the actual value from the selected environment. Switching from Staging to Production is then as simple as selecting a different environment at run time — no test case changes required.
 
+---
+
+## 4. How Environments Are Selected at Execution Time
+
+The environment you select **at the time of execution** determines which variable values are injected. There are three ways you can trigger a test run, and each one requires you to pick an environment:
+
+### Execute Now (Manual Run)
+When you manually trigger a test run from a Test Suite or Test Plan, you will be prompted to select an environment before the run starts. This is ideal for ad-hoc testing on demand (e.g., quickly verifying a fix on Staging).
+
+### Schedules
+When you create a Schedule (under **RUN > Schedules**), you configure it once with a specific environment. Every time the schedule fires (e.g., nightly at midnight), it always runs against that environment — automatically, with zero manual input.
+
+### CI/CD Pipeline (GitHub Actions, Jenkins)
+When triggering SuperQA from a CI/CD pipeline using the API, you pass the **environment name** as a parameter in the API call. This allows your pipeline to dynamically select environments — for example, running against **Staging** on a pull request and against **Production** on a release merge.
+
+```yaml
+# Example: passing environment in a GitHub Actions workflow
+- name: Run SuperQA Tests
+  run: |
+    curl -X POST https://api.superqa.ai/run \
+      -H "Authorization: Bearer ${{ secrets.SUPERQA_API_KEY }}" \
+      -d '{"suite_id": "your-suite-id", "environment": "staging"}'
+```
+
+> **The golden rule:** Never hardcode environment-specific values (URLs, credentials, IDs) directly in test steps. Always store them as environment variables and reference them with `{{VARIABLE_NAME}}`. This keeps your tests portable and your environments truly isolated.
