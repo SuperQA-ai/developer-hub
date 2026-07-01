@@ -55,3 +55,14 @@ If a key is compromised, no longer needed, or was accidentally exposed, you shou
 Once revoked, the key is permanently invalidated. Any service still using that key will immediately lose access and will receive authentication errors until it is updated with a new key.
 
 > **Best Practice**: Treat API keys like passwords. Rotate them regularly, use a separate key per integration (not one shared key), and revoke any key that may have been exposed in logs, chat, or version control.
+
+---
+
+## 4. Using Your API Key
+
+Once you have your API key, you can use it to connect SuperQA with external tools and automate your test workflows.
+
+A common use case is triggering test runs automatically from your CI/CD pipeline. SuperQA provides a native **GitHub Actions** integration where your API key is passed as a secret to authenticate and kick off test executions on every pull request or push.
+
+👉 See the [GitHub Actions Integration](../configure/integrations/github-action/overview.md) guide for a step-by-step setup.
+
