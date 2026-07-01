@@ -88,9 +88,10 @@ const config: Config = {
       },
       items: [
         {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
-          to: '/docs/introduction',
         },
         {
           label: 'Roadmap',
