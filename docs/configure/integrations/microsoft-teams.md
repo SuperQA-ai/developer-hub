@@ -1,7 +1,7 @@
 ---
 id: microsoft-teams
 title: Microsoft Teams
-sidebar_position: 3
+sidebar_position: 7
 ---
 
 # Microsoft Teams Integration
