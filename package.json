@@ -30,6 +30,7 @@
     "@docusaurus/preset-classic": "^3.9.2",
     "@docusaurus/theme-classic": "^3.9.2",
     "@docusaurus/theme-mermaid": "^3.9.2",
+    "@easyops-cn/docusaurus-search-local": "^0.55.2",
     "@mdx-js/react": "^3.0.0",
     "@segment/analytics-next": "^1.70.0",
     "@types/react": "^18.2.48",

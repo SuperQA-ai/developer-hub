@@ -144,6 +144,15 @@ const config: Config = {
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+      },
+    ],
     'docusaurus-plugin-sass',
     [
       path.resolve(__dirname, './plugins/docs-rss-plugin'),
