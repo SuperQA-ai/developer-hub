@@ -115,9 +115,6 @@ const config: Config = {
         },
       ],
     },
-    footer: {
-      copyright: `Copyright © ${new Date().getFullYear()} SuperQA Inc.`,
-    },
     prism: {
       theme: themes.github,
       darkTheme: themes.vsDark,
