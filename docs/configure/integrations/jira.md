@@ -1,7 +1,7 @@
 ---
-id: overview
-title: Jira Integration
-sidebar_position: 1
+id: jira
+title: Jira
+sidebar_position: 2
 ---
 
 # Jira Integration

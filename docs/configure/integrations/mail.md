@@ -1,6 +1,6 @@
 ---
-id: overview
-title: Overview
+id: mail
+title: Email
 sidebar_position: 1
 ---
 

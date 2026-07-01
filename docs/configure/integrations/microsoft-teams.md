@@ -1,7 +1,7 @@
 ---
-id: microsoft-teams-overview
-title: Microsoft Teams Integration
-sidebar_position: 1
+id: microsoft-teams
+title: Microsoft Teams
+sidebar_position: 3
 ---
 
 # Microsoft Teams Integration
