@@ -116,67 +116,6 @@ const config: Config = {
       ],
     },
     footer: {
-      // style: "dark",
-      links: [
-        {
-          title: 'Resources',
-          items: [
-            {
-              label: 'Sign up',
-              to: 'https://app.superqa.ai/auth/#/signup/&?utm_source=website&utm_medium=superqa-developer-hub&utm_campaign=docs&utm_content=get-started',
-            },
-            {
-              label: 'API Reference',
-              to: 'https://app.superqa.ai/api/docs',
-            },
-            {
-              label: 'GitHub',
-              to: 'https://github.com/superqa',
-            },
-            {
-              label: 'Release Notes',
-              href: '/release-notes',
-            },
-            {
-              label: 'Roadmap',
-              href: '/roadmap',
-            },
-            {
-              label: 'Blog',
-              to: 'https://superqa.ai/blog',
-            },
-            {
-              label: 'Support',
-              to: 'https://superqa.ai/support',
-            },
-          ],
-        },
-        {
-          title: 'Legal',
-          items: [
-            {
-              label: 'Terms of Use',
-              to: 'legal/terms-of-use',
-            },
-            {
-              label: 'Privacy Policy',
-              to: 'https://superqa.ai/legal/privacy',
-            },
-            {
-              label: 'Accessibility',
-              to: 'legal/accessibility',
-            },
-            {
-              html: "<a href='javascript:void(0)' class='footer__link-item' onclick='window.OneTrust && window.OneTrust.ToggleInfoDisplay()'>Cookie Management</a>",
-              // href: "javascript: alert(33)",
-            },
-            {
-              label: 'Do not sell or share my personal information',
-              to: 'https://superqa.ai/legal/privacy',
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} SuperQA Inc.`,
     },
     prism: {
