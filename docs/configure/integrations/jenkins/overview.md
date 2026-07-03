@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-overview
 sidebar_position: 1
 title: Overview
 description: Introduction to the SuperQA Jenkins Plugin for automated testing

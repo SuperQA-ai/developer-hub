@@ -2,6 +2,7 @@
 id: index
 title: Reports & Analytics
 sidebar_position: 1
+sidebar_class_name: menu__list-item--icon-reports
 ---
 
 # Reports & Analytics

@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-installation
 sidebar_position: 2
 title: Installation
 description: How to install the SuperQA Jenkins Plugin

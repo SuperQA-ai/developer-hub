@@ -1,7 +1,8 @@
 ---
 id: github-repo
-title: GitHub Repository Access
+title: GitHub Repo
 sidebar_position: 4
+sidebar_class_name: menu__list-item--icon-github-repo
 ---
 
 # GitHub Repository Access

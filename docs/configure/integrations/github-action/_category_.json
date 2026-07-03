@@ -1,5 +1,6 @@
 {
   "label": "GitHub Action",
   "position": 3,
-  "collapsible": true
+  "collapsible": true,
+  "className": "menu__list-item--icon-github-action"
 }

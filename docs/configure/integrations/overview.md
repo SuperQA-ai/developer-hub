@@ -2,6 +2,7 @@
 id: integrations-overview
 title: Overview
 sidebar_position: 1
+sidebar_class_name: menu__list-item--icon-integrations-overview
 ---
 
 # Integrations

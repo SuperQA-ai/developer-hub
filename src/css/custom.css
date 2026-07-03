@@ -2493,19 +2493,22 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 /* fa-database */
 
 /* RUN icons */
-.menu__list-item--icon-schedules>a::before {
+.menu__list-item--icon-schedules>a::before,
+.menu__list-item--icon-schedules>.menu__list-item-collapsible>a::before {
   content: "\f017";
   font-weight: 400;
 }
 
 /* fa-clock */
-.menu__list-item--icon-test-runs>a::before {
+.menu__list-item--icon-test-runs>a::before,
+.menu__list-item--icon-test-runs>.menu__list-item-collapsible>a::before {
   content: "\f144";
   font-weight: 400;
 }
 
 /* fa-play-circle */
-.menu__list-item--icon-release-runs>a::before {
+.menu__list-item--icon-release-runs>a::before,
+.menu__list-item--icon-release-runs>.menu__list-item-collapsible>a::before {
   content: "\f093";
 }
 

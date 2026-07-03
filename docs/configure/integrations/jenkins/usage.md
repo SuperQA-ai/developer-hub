@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-usage
 sidebar_position: 4
 title: Usage
 description: How to use the SuperQA Jenkins Plugin

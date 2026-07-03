@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-github-action-overview
 sidebar_position: 1
 title: Overview
 description: Introduction to the SuperQA GitHub Action

@@ -7,65 +7,56 @@ sidebar_class_name: menu__list-item--icon-test-plans
 
 # Test Plans
 
-A **Test Plan** answers the question: *"Which tests do I need to run, against which environment, and for what purpose?"* It is a structured, reusable configuration that bundles together selected Test Suites under a specific execution goal — such as a Regression cycle, a Smoke test before a release, or a Sprint validation.
+While Release Plans are focused on product milestones, **Test Plans** answer the question: *"What testing strategy am I executing?"* A Test Plan is a structured configuration that bundles together test cases based on specific testing goals, such as verifying core stability or ensuring full coverage after a sprint.
 
-Instead of manually selecting suites every time you want to run a specific category of tests, you define a Test Plan once and reuse it across every scheduled or manual execution. This ensures consistency across your QA cycles.
+Once created, you can execute Test Plans on-demand or schedule them for continuous, automated testing.
 
 ---
 
 ## 1. Creating a Test Plan
 
-1. Navigate to **BUILD > Test Plans** in the left sidebar.
-2. Click the **+ Add Test Plan** button (top right).
-3. Fill in the form:
-
-| Field | Description |
-|---|---|
-| **Plan Name** | A descriptive label for this plan (e.g., *Sprint 24 Regression*, *Pre-Release Smoke*). |
-| **Environment** | Select the environment this plan will run against (e.g., Staging, Production). Environments are configured under **Configure > Environment**. |
-| **Description** | Optionally describe the scope or goal of this Test Plan. |
-
-4. Click **Create** to save the plan.
+To define a new testing strategy:
+1. Navigate to **BUILD > Test Plans** and click **+ New Test Plan**.
+2. **Select the Test Plan Type:** Choose a predefined strategy based on your goal:
+   - **Smoke Test** *(Fast - Shallow)*: Quick build stability check. Is the app alive and are core flows reachable?
+   - **Sanity Test** *(Focused - Module)*: Post-fix validation. Did a recent change work without breaking nearby features?
+   - **Regression Test** *(Comprehensive)*: Full coverage after changes. Does everything still work end-to-end?
+3. **Name & Describe:** Provide a descriptive name (e.g., *Sprint 24 Smoke Test*) and an optional goal.
+4. **Select Test Cases:** The system will automatically filter and display test cases that match your chosen strategy (e.g., highlighting tests tagged as "Smoke"). Select the specific suites and scenarios you wish to include.
+5. Review and save your plan.
 
 ---
 
-## 2. Adding Test Suites to a Plan
+## 2. On-Demand Execution
 
-Once the plan is created, you need to associate Test Suites with it — these are the suites whose tests will actually run when this plan is executed.
+If you need immediate feedback, you can trigger a Test Plan manually.
 
-1. Open the newly created Test Plan.
-2. Click **+ Add Suite** or the **Add Test Suites** button.
-3. A selection panel will appear listing all your available Test Suites.
-4. Check the suites you want to include. You can include as many suites as needed.
-5. Click **Confirm** to attach them.
-
-> **Tip:** You can mix and match suites from different feature areas into a single Test Plan. For example, a *Full Regression* plan might include the Checkout, Authentication, and Settings suites all at once.
+1. From the Test Plans list, click **Execute Now** on the desired plan.
+2. The **Execution Settings** modal will appear.
+3. Choose the **Run Mode** (Sequential or Parallel).
+4. Select the target **Environment** (e.g., staging or production). 
+5. Click **Next** to launch the run.
 
 ---
 
-## 3. The Test Plan List View
+## 3. Continuous Scheduling & Reports
 
-The main Test Plans page shows a summary table of all your plans:
+The major advantage of Test Plans over Release Plans is that they can be fully automated via schedules. This allows for continuous testing and monitoring of your application's health.
 
-| Column | What it shows |
-|---|---|
-| **Plan Name** | The name and creation date of the plan. |
-| **Environment** | The target environment configured for this plan. |
-| **Test Suites** | The number of suites included in this plan. |
-| **Test Cases** | The total count of individual test cases across all included suites. |
-| **Status** | The last execution outcome of this plan (Passed, Failed, In Progress, or Not Run). |
-| **Actions** | Options to Edit, Run, or Delete the plan. |
+1. From the Test Plans list, click the **Schedule** button on a plan.
+2. Configure the **Schedule Configuration**:
+   - Set a **Start Date** and specific **Execution Times**.
+   - Choose a **Recurrence Pattern** (e.g., daily, weekly).
+   - Select the **Run Mode** (Sequential/Parallel) and target **Environment**.
+3. Proceed to set up custom notifications, or click **Skip Notifications & Create Schedule**.
+
+### Continuous Reporting
+Every time a scheduled (or on-demand) Test Plan finishes, it generates a comprehensive **Test Run Report**. You can continuously monitor these reports under **RUN > Test Runs** to track stability trends over time.
 
 ---
 
-## 4. Running a Test Plan
+## 4. Triggering via CI/CD (GitHub Actions)
 
-Test Plans can be executed in two ways:
+In addition to manual executions and time-based schedules, Test Plans can be directly mapped to and triggered by your CI/CD pipelines. 
 
-- **Manual Run**: From the Test Plans list, click the **Run** (▶) button on any plan to trigger an immediate execution.
-- **Scheduled Run**: Attach the Test Plan to a **Schedule** (under RUN > Schedules) to automate it on a recurring basis (e.g., every night at midnight).
-
-When a Test Plan is run, SuperQA executes each test case across all associated suites sequentially and generates a consolidated **Test Run Report** showing pass/fail counts, screenshots, and logs for each step.
-
-> **What's Next?**
-> Ready to automate? Attach your Test Plan to a **Schedule** so it runs automatically on a cadence that matches your development cycle.
+By integrating with our [GitHub Action](../configure/integrations/github-action/overview.md), you can configure your pipeline to automatically execute a specific Test Plan whenever code is pushed or a pull request is opened. This ensures that a passing Smoke or Sanity Test Plan becomes a mandatory check before code can be merged and deployed.

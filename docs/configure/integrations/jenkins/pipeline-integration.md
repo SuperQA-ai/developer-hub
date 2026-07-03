@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-pipeline
 sidebar_position: 5
 title: Pipeline Integration
 description: Integrate SuperQA with Jenkins pipelines

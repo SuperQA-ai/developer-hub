@@ -2,6 +2,7 @@
 sidebar_position: 5
 title: Troubleshooting
 description: Common issues and solutions for the SuperQA GitHub Action
+sidebar_class_name: menu__list-item--icon-github-action-troubleshooting
 ---
 
 # Troubleshooting Guide

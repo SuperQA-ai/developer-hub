@@ -2,6 +2,7 @@
 sidebar_position: 3
 title: Configuration
 description: Configuration reference for the SuperQA GitHub Action
+sidebar_class_name: menu__list-item--icon-github-action-configuration
 ---
 
 # Configuration Reference

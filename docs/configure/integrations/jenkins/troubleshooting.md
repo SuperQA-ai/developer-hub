@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-troubleshooting
 sidebar_position: 6
 title: Troubleshooting
 description: Common issues and solutions for the SuperQA Jenkins Plugin

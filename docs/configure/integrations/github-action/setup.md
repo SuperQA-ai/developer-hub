@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-github-action-setup
 sidebar_position: 2
 title: Setup
 description: Set up the SuperQA GitHub Action in your repository

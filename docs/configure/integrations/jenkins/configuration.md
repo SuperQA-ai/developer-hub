@@ -1,4 +1,5 @@
 ---
+sidebar_class_name: menu__list-item--icon-jenkins-configuration
 sidebar_position: 3
 title: Configuration
 description: Configure the SuperQA Jenkins Plugin

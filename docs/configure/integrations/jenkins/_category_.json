@@ -1,5 +1,6 @@
 {
   "label": "Jenkins Plugin",
   "position": 2,
-  "collapsible": true
+  "collapsible": true,
+  "className": "menu__list-item--icon-jenkins"
 }

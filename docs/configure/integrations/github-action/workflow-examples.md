@@ -2,6 +2,7 @@
 sidebar_position: 4
 title: Workflow Examples
 description: Advanced workflow examples for the SuperQA GitHub Action
+sidebar_class_name: menu__list-item--icon-github-action-examples
 ---
 
 # Workflow Examples

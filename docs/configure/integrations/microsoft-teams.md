@@ -2,6 +2,7 @@
 id: microsoft-teams
 title: Microsoft Teams
 sidebar_position: 7
+sidebar_class_name: menu__list-item--icon-microsoft-teams
 ---
 
 # Microsoft Teams Integration
