@@ -2,7 +2,7 @@ import React from "react";
 import MDXContent from "@theme/MDXContent";
 import Layout from "@theme/Layout";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import TermsOfUse from "../../../docs/legal/terms-of-use.md";
+import TermsOfUse from "../../../docs/_legal/terms-of-use.md";
 import styles from "./terms-of-use.module.scss";
 
 export default function TermsOfUsePage() {
