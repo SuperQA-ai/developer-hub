@@ -2470,7 +2470,8 @@ html[data-theme='dark'] [class*="menu__list-item--icon-"]>.menu__list-item-colla
 /* fa-magic (sparkle) */
 
 /* BUILD icons */
-.menu__list-item--icon-test-suites>a::before {
+.menu__list-item--icon-test-suites>a::before,
+.menu__list-item--icon-test-suites>.menu__list-item-collapsible>a::before {
   content: "\f5fd";
 }
 

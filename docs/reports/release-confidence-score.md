@@ -1,13 +1,13 @@
 ---
 id: release-confidence-score
-title: Release Confidence Score
+title: Release Confidence Score (Staging Gate)
 sidebar_position: 2
 sidebar_class_name: menu__list-item--icon-release-confidence
 ---
 
-# Release Confidence Score
+# Release Confidence Score (Staging Gate)
 
-The **Release Confidence Score** is SuperQA's definitive go/no-go signal before every release. Every time you execute a [Release Run](/docs/run/release-runs), SuperQA aggregates the results of all mapped test cases — weighted by severity — and produces a single numeric score and a clear verdict: ✅ **Ready to Ship** or ⚠️ **Caution**.
+The **Release Confidence Score** is SuperQA's definitive go/no-go signal before every release. Every time you execute a [Release Run](/docs/run/release-runs) in your staging environment, SuperQA aggregates the results of all mapped test cases — weighted by severity — and produces a single numeric score and a clear verdict: ✅ **Ready to Ship** or ⚠️ **Caution**.
 
 No more gut-feel releases. No more crossing fingers on deploy day.
 

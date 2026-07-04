@@ -5,17 +5,17 @@ sidebar_position: 1
 slug: /run/schedules
 ---
 
-# Schedules Overview
+# Production Monitoring (Schedules)
 
-Schedules allow you to automate the execution of your Test Plans on a recurring or one-time basis — no manual triggers needed. Once configured, SuperQA will automatically execute the mapped Test Plan at the defined time, using your selected environment, run mode, and notification preferences.
+**Production Monitoring** is the practice of continuously verifying your live application's health. In SuperQA, this is achieved by linking **Test Plans** to automated **Schedules**. 
 
-This is the backbone of **Continuous Quality Monitoring**: your tests keep running on autopilot while you ship.
+By running your Test Plans on a recurring basis, your tests stay on autopilot, acting as a continuous monitor in production while you ship.
 
 ## How It Works
 
-A Schedule links a **Test Plan** to an automated execution trigger. Once saved, the schedule is **active immediately**. 
+A **Schedule** is simply the automation engine that powers Production Monitoring. It links a Test Plan to an execution trigger. Once saved, the schedule is **active immediately**. 
 
-Here is what happens at runtime:
+Here is what happens during a monitoring cycle:
 
 1. SuperQA detects the scheduled trigger time.
 2. The **Test Plan** is loaded with all its mapped test cases.

@@ -7,9 +7,9 @@ sidebar_class_name: menu__list-item--icon-test-plans
 
 # Test Plans
 
-While Release Plans are focused on product milestones, **Test Plans** answer the question: *"What testing strategy am I executing?"* A Test Plan is a structured configuration that bundles together test cases based on specific testing goals, such as verifying core stability or ensuring full coverage after a sprint.
+While Release Plans are focused on gating deployments, **Test Plans** are the foundation of your **Production Monitoring** strategy. A Test Plan is a structured configuration that bundles together test cases designed to verify the continuous health and core stability of your application in production.
 
-Once created, you can execute Test Plans on-demand or schedule them for continuous, automated testing.
+Once created, you can execute Test Plans on-demand, but their primary purpose is to be attached to automated **Schedules** to continuously monitor your live environments.
 
 ---
 
@@ -41,7 +41,7 @@ If you need immediate feedback, you can trigger a Test Plan manually.
 
 ## 3. Continuous Scheduling & Reports
 
-The major advantage of Test Plans over Release Plans is that they can be fully automated via schedules. This allows for continuous testing and monitoring of your application's health.
+Because Test Plans are built for **Production Monitoring**, their major advantage is that they can be fully automated via schedules. Connecting a Test Plan to a schedule ensures your application's health is verified continuously without manual intervention.
 
 1. From the Test Plans list, click the **Schedule** button on a plan.
 2. Configure the **Schedule Configuration**:
